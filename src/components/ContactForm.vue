@@ -8,26 +8,46 @@
       <input type="email" required v-model="email">
 
         <label>Category:</label>
-      <select v-model="category">
+      <select required v-model="category">
           <option value="oxfords">Oxfords</option>
           <option value="brogues">Brogues</option>
       </select>
 
+       <label>Message:</label>
+      <input type="textarea" required v-model="textarea">
   </form>
+    <div v-if="showModal">
+    <Modal :name="name" :email="email" :category="category" :textarea="textarea" @close="toggleModal" />
+    </div>
 
-  <p>Name: {{ name }}</p>
+        <div class="submit">
+        <button @click="toggleModal">Submit</button>
+    </div>
+
+
+  <!-- <p>Name: {{ name }}</p>
   <p>Email: {{ email }}</p>
-  <p>Category : {{ category }}</p>
+  <p>Category: {{ category }}</p>
+  <p>Message: {{ textarea }}</p> -->
   </div>
 </template>
 
 <script>
+import Modal from './Modal.vue'
 export default {
+    components: { Modal },
     data() {
         return {
             name: '',
             email: '',
-            category: ''
+            category: '',
+            textarea: '',
+            showModal: false
+        }
+    },
+    methods:{
+        toggleModal() {
+            this.showModal = !this.showModal
         }
     }
 }
@@ -59,5 +79,16 @@ input, select {
     border: none;
     border-bottom: 1px solid #ddd;
     color: #555;
+}
+button {
+    background: #0b6dff;
+    border: 0;
+    padding: 10px 20px;
+    margin-top: 20px;
+    color: white;
+    border-radius: 20px;
+}
+.submit {
+    text-align: center;
 }
 </style>
