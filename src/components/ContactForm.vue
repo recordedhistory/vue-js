@@ -1,6 +1,6 @@
 <template>
 <div>
-  <form>
+  <form @submit.prevent="handleSubmit"  @submit="toggleModal">
        <label>Name:</label>
       <input type="text" required v-model="name">
 
@@ -15,13 +15,13 @@
 
        <label>Message:</label>
       <input type="textarea" required v-model="textarea">
-  </form>
-    <div v-if="showModal">
-    <Modal :name="name" :email="email" :category="category" :textarea="textarea" @close="toggleModal" />
-    </div>
 
         <div class="submit">
-        <button @click="toggleModal">Submit</button>
+        <button>Submit</button>
+    </div>
+  </form>
+     <div v-if="showModal">
+    <Modal :name="name" :email="email" :category="category" :textarea="textarea" @close="toggleModal" />
     </div>
 
 
@@ -48,6 +48,9 @@ export default {
     methods:{
         toggleModal() {
             this.showModal = !this.showModal
+        },
+        handleSubmit() {
+            console.log('form submitted')
         }
     }
 }

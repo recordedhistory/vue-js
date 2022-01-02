@@ -1,11 +1,11 @@
 <template>
-  <div class="backdrop" @click="closeModal">
+  <div class="backdrop" @click.self="closeModal">
       <div class="modal">
           <h1>Submission Information</h1>
-          <p>{{ name }}</p>
-          <p>{{ email }}</p>
-          <p>{{ category }}</p>
-          <p>{{ textarea }}</p>
+          <p>Name: {{ name }}</p>
+          <p>Email: {{ email }}</p>
+          <p>Category: {{ category }}</p>
+          <p>Message: {{ textarea }}</p>
       </div>
     </div>
 </template>
