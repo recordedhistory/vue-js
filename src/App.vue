@@ -1,13 +1,25 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
+      <top-header></top-header>
+      <!-- <router-link to="/">Home</router-link> |
       <router-link :to="{ name: 'About' }">About Us</router-link> | 
-      <router-link :to="{ name: 'Contact' }">Contact</router-link>
+      <router-link :to="{ name: 'Contact' }">Contact</router-link> -->
     </div>
     <router-view/>
   </div>
 </template>
+
+
+<script>
+import TopHeader from '@/components/TopHeader.vue';
+ export default {
+   components: {
+     "top-header": TopHeader
+   }
+ };
+</script>
+
 
 <style>
 #app {
@@ -29,5 +41,8 @@
 
 #nav a.router-link-exact-active {
   color: #42b983;
+}
+img {
+  width: 100%;
 }
 </style>
