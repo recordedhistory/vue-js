@@ -26,12 +26,10 @@ export default {
 </script>
 
 <style>
- /* .carousel {
-     position: relative;
-     width: 600px;
-     height: 350px;
-     overflow: hidden;
- } */
+ .carousel {
+     margin-bottom: 20px;
+     width: 100%;
+ }
  button {
      /* position: absolute;
      height: 40px;

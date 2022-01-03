@@ -1,6 +1,9 @@
 <template>
   <div class="home">
-    <carousel
+    <b-container>
+      <b-row align-v="center">
+        <b-col md="12">
+          <carousel
       @next="next"
       @prev="prev"
       >
@@ -12,6 +15,35 @@
         <img :src="slide" />
       </carousel-slide>
     </carousel>
+        </b-col>       
+      </b-row>
+      </b-container>
+
+      <b-container>
+      <b-row align-v="center">
+        <b-col md="4">
+          <b-card
+          img-src="https://picsum.photos/id/137/300/300"
+          >
+            <b-card-text>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</b-card-text>
+          </b-card>
+        </b-col>   
+         <b-col md="4">
+          <b-card
+          img-src="https://picsum.photos/id/128/300/300"
+          >
+            <b-card-text>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</b-card-text>
+          </b-card>
+        </b-col> 
+        <b-col md="4">
+          <b-card
+          img-src="https://picsum.photos/id/139/300/300"
+          >
+            <b-card-text>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</b-card-text>
+          </b-card>
+        </b-col>     
+      </b-row>
+      </b-container>
   </div>
 </template>
 
