@@ -30,15 +30,15 @@ export default {
      margin-bottom: 20px;
      width: 100%;
  }
- button {
+ /* button {
      /* position: absolute;
      height: 40px;
      width: 50px;
      top: calc(50% -20px); */
-     background-color: rgba(0,0,0,0.8);
-     border: none;
-     color: #FFF;
- }
+     /* background-color: rgba(0,0,0,0.8); */
+     /* border: none;
+     color: #FFF; */
+ /* } */
  button:focus, button:hover {
      outline: none;
      cursor: pointer;

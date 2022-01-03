@@ -29,7 +29,11 @@ import TopHeader from '@/components/TopHeader.vue';
   text-align: center;
   color: #2c3e50;
 }
-
+.modal {
+  display: block;
+  position: relative;
+  height: auto;
+}
 #nav {
   padding: 30px;
 }

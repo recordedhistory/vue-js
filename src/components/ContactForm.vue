@@ -83,7 +83,7 @@ input, select {
     border-bottom: 1px solid #ddd;
     color: #555;
 }
-.prev, .next {
+.prev, .next, .submit button {
     background: #0b6dff;
     border: 0;
     padding: 10px 20px;
